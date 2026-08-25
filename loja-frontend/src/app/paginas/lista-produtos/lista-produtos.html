@@ -1,0 +1,9 @@
+<h2>Lista de Produtos</h2>
+
+<ul>
+  @for(p of produtos(); track p.id) {
+  <li>
+    <strong>{{ p.nome }}</strong> - R$ {{ p.preco }}
+  </li>
+  }
+</ul>

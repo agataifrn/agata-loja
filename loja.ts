@@ -1,8 +1,10 @@
 import express, { type Express, type Request, 
                   type Response } from 'express';
 
-const app: Express = express();
+import cors from 'cors';
 
+const app: Express = express();
+app.use(cors())
 const produtos = [
   {
     "id": 1,
