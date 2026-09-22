@@ -54,6 +54,6 @@ export class CarrinhoService {
   }
 
   obterTotal(): number {
-    return this.itens().reduce((total, item) => total + (item.produto.preco * item.quantidade), 0);
+  return this.itens().reduce((total, item) => total + (item.produto.preco * item.quantidade), 0);
   }
 }

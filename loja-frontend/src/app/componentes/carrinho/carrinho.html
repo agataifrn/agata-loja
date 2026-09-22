@@ -15,8 +15,8 @@
   @for (item of carrinhoService.itens(); track item.id) {
     <div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; border-radius: 5px;">
       <h3>{{ item.produto.nome }}</h3>
-      <p>Preço unitário: R$ {{ item.produto.preco }}</p>
-      <p>Subtotal: R$ {{ item.produto.preco * item.quantidade }}</p>
+      <p>Preço unitário: R$ {{ item.produto.preco.toFixed(2) }}</p>
+      <p>Subtotal: R$ {{ (item.produto.preco * item.quantidade).toFixed(2) }}</p>
       
       <div style="display: flex; align-items: center; gap: 8px;">
         <button (click)="diminuir(item.id)">-</button>
@@ -29,6 +29,6 @@
   }
 
   <div style="margin-top: 20px; font-size: 1.2em;">
-    <strong>Total da Compra: R$ {{ carrinhoService.obterTotal() }}</strong>
+    <strong>Total da Compra: R$ {{ carrinhoService.obterTotal().toFixed(2) }}</strong>
   </div>
 }
