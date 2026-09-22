@@ -3,7 +3,8 @@
 <ul>
   @for(p of produtos(); track p.id) {
   <li>
-    <strong>{{ p.nome }}</strong> - R$ {{ p.preco }}
+    <b>{{ p.nome }}</b> - R$ {{ p.preco }}
+    <button (click)="adicionarAoCarrinho(p)">Adicionar ao carrinho</button>
   </li>
   }
 </ul>
